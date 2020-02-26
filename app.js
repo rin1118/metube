@@ -1,12 +1,12 @@
 import express from "express";
+import dotenv from "dotenv";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
-import session from "express";
+// import session from "express";
 
 const app = express();
-const port = 3000;
 
 app.set("view engine", "pug");
 app.use(helmet());
@@ -22,6 +22,6 @@ app.use(morgan("dev"));
 //   })
 // );
 
-app.get("/", (req, res) => res.render("index"));
+app.get("/", (req, res) => res.render("home"));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+export default app;
