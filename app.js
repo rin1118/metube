@@ -5,8 +5,9 @@ import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import { middleWares } from "./middleWares";
 import routes from "./routes";
-import videoRouter from "./router/videoRouter";
 import globalRouter from "./router/globalRouter";
+import videoRouter from "./router/videoRouter";
+import userRouter from "./router/userRouter";
 // import session from "express";
 
 const app = express();
@@ -29,5 +30,6 @@ app.use(morgan("dev"));
 app.use(middleWares);
 app.use(routes.home, globalRouter);
 app.use(routes.video, videoRouter);
+app.use(routes.user, userRouter);
 
 export default app;
