@@ -3,6 +3,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
+import { middleWares } from "./middleWares";
 // import session from "express";
 
 const app = express();
@@ -22,6 +23,7 @@ app.use(morgan("dev"));
 //   })
 // );
 
+app.use(middleWares);
 app.get("/", (req, res) => res.render("home"));
 
 export default app;

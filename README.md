@@ -1,5 +1,10 @@
 page
 
+- global
+
+  1. home
+  2. search
+
 - user
 
   1. join
