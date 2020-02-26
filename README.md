@@ -6,7 +6,7 @@ page
   2. login
   3. profile
   4. myPage
-  5. change password
+  5. edit password
   6. my channel
 
 - video
