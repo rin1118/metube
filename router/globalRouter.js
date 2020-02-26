@@ -1,5 +1,10 @@
 import express from "express";
+import routes from "../routes";
+import { search, home } from "../controller/globalController";
 
-const global = express();
+const globalRouter = express.Router();
 
-export default global;
+globalRouter.get(routes.home, home);
+globalRouter.get(routes.search, search);
+
+export default globalRouter;
